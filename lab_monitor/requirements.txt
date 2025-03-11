@@ -1,0 +1,7 @@
+streamlit==1.39.0
+plotly==5.24.1
+pandas==2.2.3
+numpy>=1.26.0
+import random
+import time
+import math
