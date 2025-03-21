@@ -19,23 +19,33 @@
             padding: 20px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
-            animation: fadeIn 1s ease-in-out;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        h1 {
+            text-align: center;
+            color: #0073e6;
+            animation: fadeInScale 1.5s ease-in-out;
+            transition: transform 0.3s, color 0.3s;
         }
-        h1, h2 {
+        h1:hover {
+            transform: rotate(5deg) scale(1.1);
+            color: #ff5733;
+        }
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        h2 {
             text-align: center;
             color: #0073e6;
         }
         .section {
             margin-bottom: 30px;
-            animation: slideIn 1s ease-in-out;
-        }
-        @keyframes slideIn {
-            from { transform: translateX(-100%); }
-            to { transform: translateX(0); }
         }
         .section h2 {
             border-bottom: 2px solid #0073e6;
@@ -55,23 +65,9 @@
             margin: 10px 0;
             padding: 15px;
             border-radius: 5px;
-            transition: background 0.3s, transform 0.3s;
-            cursor: pointer;
         }
-        .section ul li:hover {
-            background: #cceeff;
-            transform: scale(1.05);
-        }
-        .info-box {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-        .info-box div {
-            flex-basis: 48%;
-        }
-        .info-box div p {
-            margin: 0 0 10px;
+        .page-break {
+            page-break-after: always;
         }
     </style>
 </head>
@@ -81,59 +77,39 @@
         
         <div class="section">
             <h2>Información Personal</h2>
-            <div class="info-box">
-                <div>
-                    <p><strong>Nombre:</strong> [Tu Nombre]</p>
-                    <p><strong>Dirección:</strong> [Tu Dirección]</p>
-                </div>
-                <div>
-                    <p><strong>Teléfono:</strong> [Tu Teléfono]</p>
-                    <p><strong>Email:</strong> [Tu Email]</p>
-                </div>
-            </div>
+            <p><strong>Nombre:</strong> [Tu Nombre]</p>
+            <p><strong>Dirección:</strong> [Tu Dirección]</p>
+            <p><strong>Teléfono:</strong> [Tu Teléfono]</p>
+            <p><strong>Email:</strong> [Tu Email]</p>
         </div>
+        <div class="page-break"></div>
 
         <div class="section">
             <h2>Experiencia Laboral</h2>
             <ul>
-                <li>
-                    <strong>[Puesto 1]</strong><br>
-                    [Empresa 1], [Fecha de inicio - Fecha de fin] <br>
-                    Descripción de tus responsabilidades y logros en este puesto.
-                </li>
-                <li>
-                    <strong>[Puesto 2]</strong><br>
-                    [Empresa 2], [Fecha de inicio - Fecha de fin] <br>
-                    Descripción de tus responsabilidades y logros en este puesto.
-                </li>
+                <li><strong>[Puesto 1]</strong> - [Empresa 1], [Fechas]</li>
+                <li><strong>[Puesto 2]</strong> - [Empresa 2], [Fechas]</li>
             </ul>
         </div>
+        <div class="page-break"></div>
 
         <div class="section">
             <h2>Educación</h2>
             <ul>
-                <li>
-                    <strong>[Título 1]</strong><br>
-                    [Institución], [Fecha de inicio - Fecha de fin] <br>
-                    Descripción de tus estudios y logros en esta institución.
-                </li>
-                <li>
-                    <strong>[Título 2]</strong><br>
-                    [Institución], [Fecha de inicio - Fecha de fin] <br>
-                    Descripción de tus estudios y logros en esta institución.
-                </li>
+                <li><strong>[Título 1]</strong> - [Institución], [Fechas]</li>
+                <li><strong>[Título 2]</strong> - [Institución], [Fechas]</li>
             </ul>
         </div>
+        <div class="page-break"></div>
 
         <div class="section">
             <h2>Habilidades</h2>
             <ul>
                 <li>[Habilidad 1]</li>
                 <li>[Habilidad 2]</li>
-                <li>[Habilidad 3]</li>
-                <li>[Habilidad 4]</li>
             </ul>
         </div>
+        <div class="page-break"></div>
 
         <div class="section">
             <h2>Referencias</h2>
